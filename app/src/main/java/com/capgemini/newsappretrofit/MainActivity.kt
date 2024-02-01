@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.Default).launch {
             val result = NewsInterface.getInstance().getTopHeadlines("in","5c050361ce5a4ecf96619d16221cd0e1")
 
+            //Log.d("MainActivity", "No. of articles: ${result.articles.size}")
             Log.d("MainActivity", "No. of articles: ${result.articles.size}")
 
             withContext(Dispatchers.Main){
